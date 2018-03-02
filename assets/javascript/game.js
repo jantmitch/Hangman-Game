@@ -4,44 +4,66 @@ var loss = 0
 var words = ["albatross", "eagle", "birdie", "par"];
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var userGuessWrong = [];
-var userGuessRight =[];
 var unsolved = [];
 
+var userWord = words[Math.floor(Math.random() * words.length)];
+console.log(userWord);
 
+document.onkeyup = function(event) {
 
-document.onKeyUp = function(event) {
+    // console.log("function started");
 
     // Determines which key was pressed.
 
     var anyKey = event.key;
 
-        }
+    if (letters.indexOf(anyKey) > -1) {
 
-    var userWord = words[Math.floor(Math.random() * words.length)];
-            // console.log(userWord);
+    }   else {
+            alert("Please choose a letter!");
 
+    }
 
-
-
+    // console.log(anyKey);
+};
 function createUnsolved() {
 
     for (var i = 0; i < userWord.length; i++){
     unsolved.push('_');
         }
-        return unsolved;
-    }
+        document.getElementById("unsolved").innerHTML = unsolved.join(" ");
 
-if(userGuessRight === letters)
-    else alert("Please choose a letter");
+};
 
+createUnsolved();
+
+
+
+// console.log(unsolved);
+
+
+
+
+
+
+
+
+
+
+
+// function checkGuess () {
+//
+//     if ()
+//     else alert("Please choose a letter");
+//     }
 
     // console.log(unsolved);
     // document.getElementById(unsolved).innerHTML;
 
-if(unsolved.indexOf(userWord) > -1);
-    // console.log(true);
-        userGuessRight.push(unsolved);
-    else(userGuessWrong.push(unsolved));
+// if(unsolved.indexOf(userWord) > -1);
+//     // console.log(true);
+//         userGuessRight.push(unsolved);
+//     else(userGuessWrong.push(unsolved));
 
 
 
